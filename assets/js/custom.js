@@ -136,12 +136,16 @@
 	/*  7. PORTFOLIO POPUP VIEW ( IMAGE LIGHTBOX )
 	/* ----------------------------------------------------------- */ 
 
-	$('.mu-filter-imglink').magnificPopup({
-	  type: 'image',
-	  mainClass: 'mfp-fade',
-	  gallery:{
-	    enabled:true
-	  }
+	// Inicializa Magnific Popup por cada tarjeta de portafolio
+	$('.mu-filter-item-content').each(function() {
+		$(this).magnificPopup({
+			delegate: 'a.mu-filter-imglink', // los <a> dentro de este contenedor
+			type: 'image',
+			mainClass: 'mfp-fade',
+			gallery: {
+				enabled: true
+			}
+		});
 	});
 
 	/* ----------------------------------------------------------- */
