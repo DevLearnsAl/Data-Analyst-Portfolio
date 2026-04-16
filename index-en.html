@@ -40,6 +40,22 @@
     <![endif]-->
 </head>
 
+<script>
+    $(document).ready(function () {
+
+        $('.education-card').each(function () {
+            $(this).magnificPopup({
+                delegate: '.mu-filter-imglink',
+                type: 'image',
+                gallery: {
+                    enabled: true
+                }
+            });
+        });
+
+    });
+</script>
+
 <body>
 
     <!-- Start Header -->

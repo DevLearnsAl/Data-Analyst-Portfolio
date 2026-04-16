@@ -537,23 +537,6 @@ button:focus {
 	
 }
 
-.mu-resume-btn {
-	margin-top: 30px;
-	display: inline-block;
-	padding: 10px 15px;
-	font-size: 14px;
-	font-weight: 700;
-	letter-spacing: 1px;
-	-webkit-transition: all 0.5s;
-	transition: all 0.5s;
-}
-
-.mu-resume-btn:hover,
-.mu-resume-btn:focus {
-	color: #fff;
-}
-
-
 /*--------------------*/
 /* SERVICE */
 /*--------------------*/
@@ -709,13 +692,7 @@ button:focus {
 	letter-spacing: 1px;
 }
 
-.filtr-container {
-  max-width: 900px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  gap: 80px;
-}
+
 
 .mu-portfolio-content {
   max-width: 900px;
@@ -728,17 +705,19 @@ button:focus {
 }
 
 .filtr-container {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-wrap: wrap;
-	gap: 60px;
-	max-width: 900px;   /* MUY importante */
-	margin: 0 auto;     /* centra matemáticamente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto; 
 }
 
 .filtr-item {
-  width: 300px;
+    width: 240px;
+    padding: 15px;
+    box-sizing: border-box; /* 🔥 CLAVE */
 }
 
 
@@ -757,7 +736,9 @@ button:focus {
 	text-align: center;
 	-webkit-transition: all 0.5s;
 	transition: all 0.5s;
-	opacity: 0;
+	opacity: 1;
+	position: static;
+	color: #333;
 }
 
 .mu-item-thumbonail{
@@ -792,7 +773,7 @@ button:focus {
     padding: 0 6px;
     width: 35px;
     line-height: 35px;
-    display: inline-block;
+    
     font-size: 15px;
     margin-right: 10px;
     margin-top: 5px;
@@ -1056,7 +1037,7 @@ button:focus {
 	background-color: #fff;
     outline: 0;
     box-shadow: none;    
-} ©
+}
 
 .mu-contact-form .form-control::-webkit-input-placeholder {
 	color: #888;
@@ -1157,6 +1138,69 @@ button:focus {
 /* RESPONSIVE STYLE */
 /*--------------------*/
 
+/* ===== FIX BOTÓN CV (NO BURBUJA) ===== */
+
+.mu-social-media a {
+    border-radius: 50%; /* solo iconos */
+}
+
+/* EXCEPCIÓN: el botón CV */
+.mu-social-media .mu-resume-btn {
+    border-radius: 4px !important;   /* quita círculo */
+    width: auto !important;
+    height: auto !important;
+    line-height: normal !important;
+    
+    padding: 10px 20px;
+    border: 2px solid #2aa198;
+    color: #2aa198;
+
+    display: inline-block;
+    margin-top: 20px;
+
+    font-weight: 700;
+    letter-spacing: 1px;
+
+    text-align: center;
+    text-decoration: none;
+
+    transition: all 0.3s ease;
+}
+
+/* hover */
+/* estilo base */
+.skill-display {
+    background: #f8f8f8;
+    padding: 30px;
+    border-radius: 12px;
+    min-height: 160px;
+    text-align: center;
+
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* hover */
+.skill-display:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+/* animación */
+.skill-display.fade-out {
+    opacity: 0;
+    transform: translateY(10px);
+}
+
+.skill-display.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.mu-social-media .mu-resume-btn:hover {
+    background-color: #2aa198;
+    color: #fff;
+}
 @media (max-width: 1199px) {
 
 	.navbar-brand img {
@@ -1432,6 +1476,8 @@ button:focus {
 	.mu-contact-content {
 		padding: 0;
 	}
+
+	
 	
 }
 
@@ -1444,4 +1490,559 @@ button:focus {
 	
 	
 }
+/* ===== LAYOUT MÁS LIMPIO ===== */
 
+.align-items-center {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+/* columna derecha ordenada */
+.col-md-7 {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* SKILL CARD MÁS PRO */
+.skill-display {
+    background: #f8f8f8;
+    padding: 35px;
+    border-radius: 16px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.skill-display:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+}
+
+/* SOCIAL */
+.custom-social {
+    margin-top: 10px;
+}
+
+/* ICONOS HORIZONTALES */
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+/* BOTÓN MÁS SEPARADO */
+.mu-resume-btn {
+    margin-top: 15px;
+}
+
+/* ===== EDUCATION SECTION ===== */
+
+
+.mu-education-content {
+    margin-top: 50px;
+}
+
+/* bloqes */
+.education-block {
+    margin-bottom: 40px;
+}
+
+.education-block h3 {
+    margin-bottom: 20px;
+}
+
+/* items */
+.education-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.education-item i {
+    font-size: 22px;
+    margin-top: 5px;
+}
+
+/* TAGS (skills bonitas 🔥) */
+.skills-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skills-tags span {
+    background: #eaeaea;
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.skills-tags span:hover {
+    background: #2aa198;
+    color: #fff;
+}
+/* FIX ICONOS EDUCATION */
+
+#mu-education .mu-filter-item-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+#mu-education .mu-filter-link,
+#mu-education .mu-filter-imglink {
+    display: inline-block;
+    margin: 5px;
+}
+
+/* contenedor de iconos */
+#mu-education .mu-filter-item-content a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* separar iconos en fila */
+#mu-education .mu-filter-item-content {
+    gap: 12px;
+}
+
+/* opcional: hacerlo más bonito */
+#mu-education .mu-filter-link {
+    background: #2aa198;
+}
+
+#mu-education .mu-filter-imglink {
+    background: #1b1c29;
+}
+
+.icon-group {
+    display: flex;
+    flex-direction: column;  /* 🔥 clave */
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.mu-filter-item-title,
+.mu-filter-item-content p {
+    display: none;
+}
+
+
+.mu-filter-item-content {
+    display: none;
+}
+
+.filtr-item img {
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.filtr-item:hover img {
+    transform: scale(1.05);
+}
+
+/* ===== COMPATIBILITY FIXES ===== */
+
+html,
+body {
+	overflow-x: hidden;
+}
+
+body {
+	word-wrap: break-word;
+}
+
+/* Keep Bootstrap columns intact outside the about section */
+.col-md-7 {
+	display: block;
+	flex-direction: initial;
+	gap: 0;
+}
+
+/* Scope the custom flex layout only to the about section */
+#mu-about .align-items-center {
+	display: flex;
+	align-items: center;
+	gap: 40px;
+}
+
+#mu-about .col-md-7 {
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+}
+
+#mu-about .skills-slider,
+#mu-about .custom-social {
+	width: 100%;
+}
+
+#mu-about .social-icons {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 15px;
+	margin-top: 10px;
+}
+
+#mu-about .mu-about-content-right {
+	float: none;
+}
+
+/* Service section spacing */
+#mu-service {
+	padding: 100px 0;
+}
+
+#mu-service .mu-service-content {
+	margin-top: 0;
+}
+
+#mu-service .row {
+	margin-left: -15px;
+	margin-right: -15px;
+}
+
+/* Portfolio / education cards */
+.filtr-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: stretch;
+	gap: 30px;
+	max-width: 1100px;
+	margin: 0 auto;
+}
+
+.filtr-item {
+	position: relative;
+	width: 100%;
+	max-width: 320px;
+	padding: 15px;
+	box-sizing: border-box;
+}
+
+.mu-item-thumbonail {
+	float: none;
+	display: block;
+	width: 100%;
+	border-radius: 12px;
+	overflow: hidden;
+}
+
+.mu-item-thumbonail img {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+/* Restore portfolio overlay content */
+#mu-portfolio .mu-filter-item-content {
+	position: absolute;
+	left: 30px;
+	right: 30px;
+	bottom: 30px;
+	top: 30px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 12px;
+	padding: 20px;
+	background: rgba(27, 28, 41, 0.82);
+	color: #fff;
+	text-align: center;
+	opacity: 0;
+	transition: all 0.3s ease;
+}
+
+#mu-portfolio .filtr-item:hover .mu-filter-item-content {
+	opacity: 1;
+}
+
+#mu-portfolio .mu-filter-item-title,
+#mu-portfolio .mu-filter-item-content p {
+	display: block;
+	color: #fff;
+	margin: 0;
+}
+
+/* Education cards keep visible text/icons without overlay */
+#mu-education .filtr-item {
+	max-width: 240px;
+}
+
+#mu-education .mu-filter-item-content {
+	position: static;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 12px;
+	padding: 16px 10px 0;
+	background: transparent;
+	color: #333;
+	opacity: 1;
+}
+
+#mu-education .mu-filter-item-title,
+#mu-education .mu-filter-item-content p {
+	display: block;
+	margin: 0;
+	color: #333;
+}
+
+#mu-education .icon-group {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 10px;
+	margin-top: 10px;
+}
+
+#mu-education .mu-filter-link,
+#mu-education .mu-filter-imglink {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0;
+}
+
+/* Resume button should not inherit social icon circle styles */
+.mu-social-media .mu-resume-btn,
+.mu-resume-btn {
+	border-radius: 4px !important;
+	width: auto !important;
+	height: auto !important;
+	line-height: normal !important;
+	padding: 10px 20px;
+	display: inline-block;
+	margin-top: 20px;
+}
+
+@media (max-width: 991px) {
+	#mu-about .align-items-center {
+		display: block;
+	}
+
+	#mu-about .col-md-7 {
+		display: block;
+	}
+
+	#mu-service,
+	.mu-about-area,
+	.mu-portfolio-area,
+	.mu-contact-area {
+		padding: 70px 0;
+	}
+}
+
+@media (max-width: 767px) {
+	.filtr-container {
+		gap: 20px;
+	}
+
+	.filtr-item {
+		max-width: 100%;
+	}
+
+	#mu-portfolio .mu-filter-item-content {
+		left: 15px;
+		right: 15px;
+		top: 15px;
+		bottom: 15px;
+	}
+
+	#mu-about .social-icons {
+		justify-content: center;
+	}
+}
+
+/* ===== EDUCATION GALLERY OVERRIDES ===== */
+
+.navbar-default .navbar-brand,
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+	width: auto;
+	max-width: none;
+	line-height: 1;
+}
+
+#mu-education .mu-portfolio-content {
+	max-width: 100%;
+}
+
+#mu-education .education-gallery {
+	display: grid;
+	grid-template-columns: repeat(4, minmax(0, 1fr));
+	gap: 28px;
+	max-width: 1120px;
+	margin: 0 auto;
+	align-items: start;
+}
+
+#mu-education .education-card {
+	width: 100%;
+	max-width: none;
+	padding: 0;
+}
+
+#mu-education .education-thumb {
+	position: relative;
+	aspect-ratio: 1 / 1;
+	background: #f6f7fb;
+	border-radius: 22px;
+	overflow: hidden;
+	box-shadow: 0 18px 45px rgba(21, 28, 56, 0.08);
+}
+
+#mu-education .education-thumb-link {
+	position: absolute;
+	inset: 0;
+	z-index: 1;
+}
+
+#mu-education .education-thumb img {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+	padding: 22px;
+	background: #fff;
+	transition: transform 0.35s ease;
+}
+
+#mu-education .education-card:hover .education-thumb img {
+	transform: scale(1.04);
+}
+
+#mu-education .education-overlay {
+	position: absolute;
+	inset: 0;
+	z-index: 2;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 20px;
+	background: linear-gradient(180deg, rgba(17, 21, 34, 0.12) 0%, rgba(17, 21, 34, 0.86) 100%);
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.3s ease;
+}
+
+#mu-education .education-card:hover .education-overlay {
+	opacity: 1;
+	visibility: visible;
+}
+
+#mu-education .education-card-body {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 10px;
+	padding: 18px 12px 0;
+	text-align: center;
+}
+
+#mu-education .education-card-body .mu-filter-item-title,
+#mu-education .education-card-body p {
+	display: block;
+	margin: 0;
+}
+
+#mu-education .education-card-body .mu-filter-item-title {
+	font-size: 18px;
+	line-height: 1.2;
+	min-height: 44px;
+}
+
+#mu-education .education-card-body p {
+	color: #5f6472;
+	font-size: 15px;
+	line-height: 1.4;
+}
+
+#mu-education .education-overlay .icon-group {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	gap: 14px;
+	margin: 0;
+}
+
+#mu-education .education-overlay .mu-filter-link,
+#mu-education .education-overlay .mu-filter-imglink {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 46px;
+	height: 46px;
+	margin: 0;
+	border: none;
+	border-radius: 50%;
+	font-size: 17px;
+	box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+#mu-education .education-overlay .education-gallery-hidden {
+	display: none;
+}
+
+#mu-education .education-overlay .education-gallery-hidden {
+	display: none;
+}
+
+#mu-education .education-overlay .mu-filter-link {
+	background: #35b7b1;
+	color: #fff;
+}
+
+#mu-education .education-overlay .mu-filter-imglink {
+	background: #ffffff;
+	color: #1b1c29;
+}
+
+#mu-education .education-overlay .mu-filter-link:hover,
+#mu-education .education-overlay .mu-filter-imglink:hover {
+	transform: translateY(-2px);
+}
+
+#mu-education .education-badge {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 10px 18px;
+	border-radius: 999px;
+	background: rgba(255, 255, 255, 0.95);
+	color: #1b1c29;
+	font-size: 14px;
+	font-weight: 700;
+	letter-spacing: 0.4px;
+}
+
+@media (max-width: 1199px) {
+	#mu-education .education-gallery {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+}
+
+@media (max-width: 640px) {
+	#mu-education .education-gallery {
+		grid-template-columns: 1fr;
+	}
+}
+
+.extra-img {
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+}

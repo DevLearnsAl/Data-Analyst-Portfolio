@@ -136,17 +136,42 @@
 	/*  7. PORTFOLIO POPUP VIEW ( IMAGE LIGHTBOX )
 	/* ----------------------------------------------------------- */ 
 
-	// Inicializa Magnific Popup por cada tarjeta de portafolio
-	$('.mu-filter-item-content').each(function() {
-		$(this).magnificPopup({
-			delegate: 'a.mu-filter-imglink', // los <a> dentro de este contenedor
+	// Abre la lupa en modal: imagen directa como lightbox y enlaces externos dentro de iframe
+	function initGalleryPopup($elements) {
+		$elements.each(function() {
+			$(this).magnificPopup({
+			delegate: 'a.mu-filter-imglink',
 			type: 'image',
 			mainClass: 'mfp-fade',
 			gallery: {
 				enabled: true
+			},
+			callbacks: {
+				elementParse: function(item) {
+					var popupType = item.el.data('popup');
+					var src = item.src || '';
+					var isDirectImage = /^data:image\//i.test(src) ||
+						/\.(jpg|jpeg|png|gif|webp|svg)(\?.*)?$/i.test(src) ||
+						/src=/.test(src) ||
+						/export=view/i.test(src);
+
+					item.type = popupType ? popupType : (isDirectImage ? 'image' : 'iframe');
+				}
+			},
+			iframe: {
+				patterns: {
+					generic: {
+						index: '',
+						src: '%id%'
+					}
+				}
 			}
 		});
-	});
+		});
+	}
+
+	initGalleryPopup($('.mu-filter-item-content').not('#mu-education .education-overlay'));
+	initGalleryPopup($('#mu-education .education-card.has-gallery'));
 
 	/* ----------------------------------------------------------- */
 	/*  8. CLIENT TESTIMONIALS (SLICK SLIDER)
