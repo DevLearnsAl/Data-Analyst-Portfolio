@@ -1,25 +1,24 @@
-
 /*
-Template Name: Kevin	
+Template Name: Kevin
 Author: MarkUps
 Author URI: http://www.markups.io/
 Version: 1.0
 */
 
-
 /* Table of Content
 ==================================================
-#BASIC TYPOGRAPHY
-#HEADER	
-#MENU 
-#FEATURED SLIDER 
-#ABOUT US
-#SERVICE 
-#PORTFOLIO
-#TESTIMONIAL
-#CONTACT US
-#FOOTER
-#RESPONSIVE STYLE
+# BASIC TYPOGRAPHY
+# HEADER
+# MENU
+# FEATURED SLIDER
+# ABOUT
+# SERVICE
+# PORTFOLIO
+# TESTIMONIAL
+# CONTACT
+# FOOTER
+# CUSTOM LAYER
+# RESPONSIVE
 */
 
 
@@ -27,9 +26,9 @@ Version: 1.0
 /* BASIC TYPOGRAPHY */
 /*--------------------*/
 
-body,
-html {
-	overflow-x:hidden;
+html,
+body {
+	overflow-x: hidden;
 }
 
 body {
@@ -38,6 +37,7 @@ body {
 	letter-spacing: 0.5px;
 	line-height: 1.5;
 	color: #1c1b1b;
+	word-wrap: break-word;
 }
 
 ul {
@@ -51,9 +51,9 @@ ul li {
 	line-height: 1.59;
 }
 
-a { 
+a {
 	text-decoration: none;
-	color: #2f2f2f;  
+	color: #2f2f2f;
 }
 
 a:hover,
@@ -73,30 +73,29 @@ h6 {
 	margin-top: 0;
 }
 
-
 h1 {
 	font-size: 38px;
 }
 
-h2 {  
-	font-size: 32px; 
-	line-height: 1.13; 
+h2 {
+	font-size: 32px;
+	line-height: 1.13;
 }
 
-h3 {  
-	font-size: 26px;  
+h3 {
+	font-size: 26px;
 }
 
-h4 {  
-	font-size: 22px;  
+h4 {
+	font-size: 22px;
 }
 
-h5 {  
-	font-size: 20px;  
+h5 {
+	font-size: 20px;
 }
 
-h6 {  
-	font-size: 18px;  
+h6 {
+	font-size: 18px;
 }
 
 img {
@@ -123,7 +122,7 @@ pre code {
 	color: #333;
 }
 
-del{
+del {
 	text-decoration-color: #ee6e73;
 }
 
@@ -151,7 +150,6 @@ blockquote {
 	background-color: #f8f8f8;
 	border-radius: 0 4px 4px 0;
 	padding: 5px 15px;
-	
 }
 
 blockquote p {
@@ -168,22 +166,22 @@ button:focus {
 	border: none;
 }
 
-/*Wordpress default class*/
+/* Wordpress default classes */
 
 .alignleft {
-	float:left;
-	margin-right:8px;
+	float: left;
+	margin-right: 8px;
 }
 
 .aligncenter {
-	display:block;
-	margin:10px auto;
+	display: block;
+	margin: 10px auto;
 }
 
 .alignright {
-	float:right;
-	margin-left:8px;
-}		
+	float: right;
+	margin-left: 8px;
+}
 
 .alignnone {
 	max-width: 100%;
@@ -195,7 +193,8 @@ button:focus {
 	text-align: center;
 }
 
-/* ========= BUTTON =========*/
+
+/* ========= BUTTON ========= */
 
 .mu-primary-btn {
 	background-color: transparent;
@@ -238,7 +237,6 @@ button:focus {
 }
 
 
-
 /*--------------------*/
 /* HEADER */
 /*--------------------*/
@@ -256,15 +254,16 @@ button:focus {
 	transition: all 0.5s;
 }
 
-.navbar-default .navbar-brand, 
-.navbar-default .navbar-brand:hover, 
+.navbar-default .navbar-brand,
+.navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus {
 	color: #fff;
 	font-size: 35px;
 	font-family: 'Poppins', sans-serif;
 	margin-top: 0;
-	width: 120px;
-	line-height: 18px;
+	width: auto;
+	max-width: none;
+	line-height: 1;
 }
 
 .navbar-brand img {
@@ -287,7 +286,6 @@ button:focus {
 	border: none;
 	border-radius: 0;
 	margin-bottom: 0;
-
 }
 
 .mu-menu {
@@ -318,8 +316,8 @@ button:focus {
 
 .navbar-default .mu-menu li a:hover,
 .navbar-default .mu-menu li a:focus,
-.navbar-default .navbar-nav > .active > a, 
-.navbar-default .navbar-nav > .active > a:focus, 
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:focus,
 .navbar-default .navbar-nav > .active > a:hover {
 	background-color: transparent;
 	color: #fff;
@@ -327,7 +325,7 @@ button:focus {
 
 .navbar-default .mu-menu li a:hover::after,
 .navbar-default .mu-menu li a:focus::after,
-.navbar-default .navbar-nav > .active > a:focus::after, 
+.navbar-default .navbar-nav > .active > a:focus::after,
 .navbar-default .navbar-nav > .active > a:hover::after {
 	transform: scale(1);
 }
@@ -345,7 +343,6 @@ button:focus {
 	float: left;
 	width: 100%;
 }
-
 
 .mu-featured-area {
 	display: inline;
@@ -397,19 +394,18 @@ button:focus {
 	width: 100%;
 }
 
-.mu-featured-content p{
+.mu-featured-content p {
 	color: #fff;
 }
 
-.mu-featured-content a{
+.mu-featured-content a {
 	margin-top: 35px;
 }
 
 
 /*--------------------*/
-/* ABOUT US */
+/* ABOUT */
 /*--------------------*/
-
 
 #mu-about {
 	background-color: #f7f7f7;
@@ -437,6 +433,14 @@ button:focus {
 	color: #1c1b1b;
 	margin-bottom: 15px;
 	position: relative;
+}
+
+.mu-header-dot {
+	border-radius: 0;
+	height: 3px;
+	width: 75px;
+	display: inline-block;
+	margin-bottom: 20px;
 }
 
 .mu-about-content {
@@ -471,7 +475,7 @@ button:focus {
 	margin-top: 20px;
 }
 
-.mu-skill-progress-bar>span {
+.mu-skill-progress-bar > span {
 	display: block;
 	margin-bottom: 5px;
 	font-size: 15px;
@@ -500,19 +504,13 @@ button:focus {
 	width: 10px;
 }
 
-.mu-pro-bar .percentCount {
-	position: absolute;
-	top: 0;
-	left: 48%;
-	color: #fff;
-}
-
-/* Ocultar el contador/porcentaje en las barras de habilidades */
+/* El plugin genera este numero encima de la barra; lo ocultamos
+   para que el bloque de habilidades se vea mas limpio. */
 .mu-pro-bar .percentCount {
 	display: none;
 }
 
-.mu-social-media{
+.mu-social-media {
 	display: inline;
 	float: left;
 	width: 100%;
@@ -524,7 +522,9 @@ button:focus {
 
 .mu-social-media a {
 	border-radius: 50%;
-	display: inline-block;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
 	font-size: 15px;
 	border: 1px solid #333;
 	width: 35px;
@@ -534,23 +534,23 @@ button:focus {
 	margin: 5px 5px;
 	-webkit-transition: all 0.5s;
 	transition: all 0.5s;
-	
 }
+
 
 /*--------------------*/
 /* SERVICE */
 /*--------------------*/
 
 .services-container {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 40px;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 40px;
 }
 
 .service-item {
-  width: 45%;
-  max-width: 420px;
+	width: 45%;
+	max-width: 420px;
 }
 
 #mu-service {
@@ -574,13 +574,7 @@ button:focus {
 	width: 100%;
 }
 
-.mu-heading-title {
-	color: #1c1b1b;
-	margin-bottom: 15px;
-	position: relative;
-}
-
-.mu-service-content{
+.mu-service-content {
 	display: inline;
 	float: left;
 	margin-top: 70px;
@@ -588,11 +582,10 @@ button:focus {
 }
 
 .mu-service-content .row {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
 }
-
 
 .mu-service-content-single {
 	background-color: #f8f8f8;
@@ -615,7 +608,7 @@ button:focus {
 	line-height: 75px;
 }
 
-.mu-service-content-single h4{
+.mu-service-content-single h4 {
 	margin-bottom: 20px;
 	font-size: 20px;
 }
@@ -632,8 +625,8 @@ button:focus {
 /* PORTFOLIO */
 /*--------------------*/
 
-
-#mu-portfolio {
+#mu-portfolio,
+#mu-education {
 	background-color: #f8f8f8;
 	display: inline;
 	float: left;
@@ -654,144 +647,19 @@ button:focus {
 	width: 100%;
 }
 
-.mu-heading-title {
-	color: #1c1b1b;
-	margin-bottom: 15px;
-	position: relative;
-}
-
-.mu-header-dot {
-	border-radius: 0;
-	height: 3px;
-	width: 75px;
-	display: inline-block;
-	margin-bottom: 20px;
-}
-
-.mu-portfolio-content{
-	display: inline;
-	float: left;
-	margin-top: 30px;
-	width: 100%;
-}
-
-.mu-portfolio-filter-area{
-	display: inline;
-	float: left;
-	width: 100%;
-	margin-top: 30px;
-}
-
-.filtr-item {
-	margin-bottom: 0px;
-	padding: 30px;
-}
-
-.filtr-item h4 {
-	font-size: 18px;
-	letter-spacing: 1px;
-}
-
-
-
 .mu-portfolio-content {
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-.mu-portfolio-content .row {
-  margin-left: 0;
-  margin-right: 0;
-}
-
-.filtr-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    gap: 30px;
-    max-width: 1000px;
-    margin: 0 auto; 
-}
-
-.filtr-item {
-    width: 240px;
-    padding: 15px;
-    box-sizing: border-box; /* 🔥 CLAVE */
-}
-
-
-.mu-filter-item-content {
-	position: absolute;
-	left: 16px;
-	top: 16px;
-	right: 16px;
-	bottom: 16px;
-	color: #fff;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	padding: 0;
-	text-align: center;
-	-webkit-transition: all 0.5s;
-	transition: all 0.5s;
-	opacity: 1;
-	position: static;
-	color: #333;
-}
-
-.mu-item-thumbonail{
 	display: inline;
 	float: left;
-	overflow: hidden;
+	margin-top: 30px;
 	width: 100%;
 }
 
-.mu-item-thumbonail img{
-	-webkit-transform: scale(1);
-	        transform: scale(1);
-	-webkit-transition: all 0.5s;
-	transition: all 0.5s;
+.mu-portfolio-filter-area {
+	display: inline;
+	float: left;
+	width: 100%;
+	margin-top: 30px;
 }
-
-.filtr-item:hover .mu-item-thumbonail img {
-	-webkit-transform: scale(1.1);
-	        transform: scale(1.1);
-}
-
-.filtr-item:hover .mu-filter-item-content{
-	opacity: 0.94;
-}
-
-.mu-filter-link,
-.mu-filter-imglink {
-	border-radius: 50%;
-    background: #1b1c29;
-    color: #fff;
-    height: 35px;
-    padding: 0 6px;
-    width: 35px;
-    line-height: 35px;
-    
-    font-size: 15px;
-    margin-right: 10px;
-    margin-top: 5px;
-    -webkit-transition: all 0.5s;
-    -o-transition: all 0.5s;
-    transition: all 0.5s;
-	
-}
-
-.mu-filter-link:hover,
-.mu-filter-imglink:hover,
-.mu-filter-link:focus,
-.mu-filter-imglink:focus {
-	background-color: #fff;
-} 
-
-
-/* Filter controls */
 
 .mu-simplefilter {
 	text-align: center;
@@ -812,12 +680,80 @@ button:focus {
 
 .mu-simplefilter li:hover,
 .mu-simplefilter li.active {
-    border-color: #fff;
+	border-color: #fff;
+}
+
+/* Se usa clearfix porque index.html y index-en.html no comparten
+   exactamente la misma estructura interna de tarjetas. */
+.filtr-container {
+	position: relative;
+	display: block;
+	width: 100%;
+}
+
+.filtr-container::after {
+	content: '';
+	display: table;
+	clear: both;
+}
+
+.filtr-item {
+	position: relative;
+	padding: 15px;
+	box-sizing: border-box;
+	margin-bottom: 0;
+}
+
+.filtr-item h4 {
+	font-size: 18px;
+	letter-spacing: 1px;
+}
+
+.mu-item-thumbonail {
+	position: relative;
+	display: block;
+	overflow: hidden;
+	width: 100%;
+	border-radius: 12px;
+}
+
+.mu-item-thumbonail img {
+	display: block;
+	width: 100%;
+	height: auto;
+	-webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: all 0.5s;
+	transition: all 0.5s;
+}
+
+.mu-filter-link,
+.mu-filter-imglink {
+	border-radius: 50%;
+	background: #1b1c29;
+	color: #fff;
+	height: 35px;
+	padding: 0 6px;
+	width: 35px;
+	line-height: 35px;
+	font-size: 15px;
+	margin-right: 10px;
+	margin-top: 5px;
+	-webkit-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	transition: all 0.5s;
+}
+
+.mu-filter-link:hover,
+.mu-filter-imglink:hover,
+.mu-filter-link:focus,
+.mu-filter-imglink:focus {
+	background-color: #fff;
 }
 
 
 /*--------------------*/
-/* CLIENT TESTIMONIALS */
+/* TESTIMONIAL */
 /*--------------------*/
 
 #mu-testimonials {
@@ -832,7 +768,7 @@ button:focus {
 }
 
 #mu-testimonials::before {
-	background: rgba(0,0,0,0.9);
+	background: rgba(0, 0, 0, 0.9);
 	bottom: 0;
 	content: '';
 	left: 0;
@@ -868,7 +804,7 @@ button:focus {
 	width: 100%;
 }
 
-.mu-testimonial-slide li{
+.mu-testimonial-slide li {
 	list-style: none;
 	text-align: center;
 }
@@ -888,13 +824,13 @@ button:focus {
 	line-height: 40px;
 }
 
-.mu-testimonial-slide li p{
+.mu-testimonial-slide li p {
 	color: #fff;
 	font-size: 16px;
 }
 
 .mu-ct-name {
-	 margin-bottom: 5px; 
+	margin-bottom: 5px;
 	color: #fff;
 	line-height: 1;
 	text-transform: uppercase;
@@ -907,7 +843,7 @@ button:focus {
 }
 
 .mu-testimonial-slide .slick-dots {
-    bottom: -70px;
+	bottom: -70px;
 }
 
 .mu-testimonial-slide .slick-dots li {
@@ -924,7 +860,6 @@ button:focus {
 	-webkit-transition: all 0.5s;
 	-o-transition: all 0.5s;
 	transition: all 0.5s;
-
 }
 
 .mu-testimonial-slide .slick-dots li button:hover,
@@ -940,7 +875,7 @@ button:focus {
 
 
 /*--------------------*/
-/* CONTACT US */
+/* CONTACT */
 /*--------------------*/
 
 #mu-contact {
@@ -965,7 +900,7 @@ button:focus {
 	padding: 0 120px;
 }
 
-.mu-contact-content{
+.mu-contact-content {
 	display: inline;
 	float: left;
 	margin-top: 50px;
@@ -998,10 +933,9 @@ button:focus {
 	color: #fff;
 }
 
-.mu-contact-top-single p{
+.mu-contact-top-single p {
 	margin-bottom: 0;
 }
-
 
 .mu-contact-bottom {
 	display: inline;
@@ -1035,8 +969,8 @@ button:focus {
 
 .mu-contact-form .form-control:focus {
 	background-color: #fff;
-    outline: 0;
-    box-shadow: none;    
+	outline: 0;
+	box-shadow: none;
 }
 
 .mu-contact-form .form-control::-webkit-input-placeholder {
@@ -1044,35 +978,29 @@ button:focus {
 	font-size: 15px;
 }
 
-.mu-contact-form .form-control:-moz-placeholder { /* Firefox 18- */
-	color: #888;
-	font-size: 15px; 
-}
-
-.mu-contact-form .form-control::-moz-placeholder {  /* Firefox 19+ */
+.mu-contact-form .form-control:-moz-placeholder {
 	color: #888;
 	font-size: 15px;
 }
 
-.mu-contact-form .form-control:-ms-input-placeholder {  
+.mu-contact-form .form-control::-moz-placeholder {
+	color: #888;
+	font-size: 15px;
+}
+
+.mu-contact-form .form-control:-ms-input-placeholder {
 	color: #888;
 	font-size: 15px;
 }
 
 .mu-contact-form .button-default::after,
 .mu-contact-form .button-default > span {
-	padding: 12px 40px;  
-}
-
-.mu-social-media {
-	display: inline;
-	float: left;
-	width: 100%;
+	padding: 12px 40px;
 }
 
 #form-messages {
 	margin-bottom: 10px;
-    background-color: #fff;
+	background-color: #fff;
 }
 
 .success {
@@ -1082,9 +1010,7 @@ button:focus {
 	color: #468847;
 	background-color: #dff0d8;
 	border: 1px solid #d6e9c6;
-	-webkit-border-radius: 4px;
-	 -moz-border-radius: 4px;
-	      border-radius: 4px;
+	border-radius: 4px;
 }
 
 .error {
@@ -1094,17 +1020,13 @@ button:focus {
 	color: #b94a48;
 	background-color: #f2dede;
 	border: 1px solid rgba(185, 74, 72, 0.3);
-	-webkit-border-radius: 4px;
-	 -moz-border-radius: 4px;
-	      border-radius: 4px;
+	border-radius: 4px;
 }
-
 
 
 /*--------------------*/
 /* FOOTER */
 /*--------------------*/
-
 
 #mu-footer {
 	background-color: #f8f8f8;
@@ -1113,7 +1035,7 @@ button:focus {
 	width: 100%;
 }
 
-.mu-footer-area{
+.mu-footer-area {
 	display: inline;
 	float: left;
 	padding: 30px 0;
@@ -1133,541 +1055,38 @@ button:focus {
 }
 
 
-
 /*--------------------*/
-/* RESPONSIVE STYLE */
+/* CUSTOM LAYER */
 /*--------------------*/
 
-/* ===== FIX BOTÓN CV (NO BURBUJA) ===== */
-
-.mu-social-media a {
-    border-radius: 50%; /* solo iconos */
-}
-
-/* EXCEPCIÓN: el botón CV */
+/* El boton de CV no debe heredar la forma circular de los iconos. */
+.mu-resume-btn,
 .mu-social-media .mu-resume-btn {
-    border-radius: 4px !important;   /* quita círculo */
-    width: auto !important;
-    height: auto !important;
-    line-height: normal !important;
-    
-    padding: 10px 20px;
-    border: 2px solid #2aa198;
-    color: #2aa198;
-
-    display: inline-block;
-    margin-top: 20px;
-
-    font-weight: 700;
-    letter-spacing: 1px;
-
-    text-align: center;
-    text-decoration: none;
-
-    transition: all 0.3s ease;
+	border-radius: 4px !important;
+	width: auto !important;
+	height: auto !important;
+	line-height: normal !important;
+	padding: 10px 20px;
+	border: 2px solid #2aa198;
+	color: #2aa198;
+	display: inline-block;
+	margin-top: 20px;
+	font-weight: 700;
+	letter-spacing: 1px;
+	text-align: center;
+	text-decoration: none;
+	transition: all 0.3s ease;
 }
 
-/* hover */
-/* estilo base */
-.skill-display {
-    background: #f8f8f8;
-    padding: 30px;
-    border-radius: 12px;
-    min-height: 160px;
-    text-align: center;
-
-    cursor: pointer;
-    transition: all 0.3s ease;
+.mu-resume-btn:hover,
+.mu-resume-btn:focus,
+.mu-social-media .mu-resume-btn:hover,
+.mu-social-media .mu-resume-btn:focus {
+	background-color: #2aa198;
+	color: #fff;
 }
 
-/* hover */
-.skill-display:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-}
-
-/* animación */
-.skill-display.fade-out {
-    opacity: 0;
-    transform: translateY(10px);
-}
-
-.skill-display.fade-in {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.mu-social-media .mu-resume-btn:hover {
-    background-color: #2aa198;
-    color: #fff;
-}
-@media (max-width: 1199px) {
-
-	.navbar-brand img {
-		width: 145px;
-		margin-top: -10px;
-	}
-
-	.navbar-default .mu-menu li a {
-		margin: 10px 12px 5px;
-	}
-
-	.mu-about-content-right {
-		margin-top: 0;
-	}
-
-	.mu-skill-progress-bar h3 {
-		margin-top: 0;
-	}
-
-	
-}
-
-@media (max-width: 991px) {
-	
-	.navbar-default .mu-menu li a {
-		font-size: 14px;
-		margin: 10px 5px;
-	}	
-
-	.mu-primary-btn {
-		font-size: 14px;
-		padding: 12px 22px;
-	}
-
-	.mu-simplefilter li{
-		margin-bottom: 10px;
-	}
-
-	.mu-about-header,
-	.mu-service-header,
-	.mu-contact-header {
-		padding: 0;
-	}
-	 
-	.mu-featured-area {
-		padding: 28% 5%;
-	}
-
-	.mu-about-content-left img{
-		width: 100%;
-	}
-
-	.mu-about-content-right {
-		margin-top: 50px;
-	}
-
-	.mu-filter-item-content {
-		padding: 0;
-	}
-
-	.filtr-item h4 {
-		font-size: 16px;
-	}
-
-	.mu-testimonial-slide li.slick-slide,
-	.mu-contact-content {
-		padding: 0 50px;
-	}
-
-		
-}
-
-@media (max-width: 767px) {
-	.navbar-default .navbar-toggle {
-		border-color: #fff;
-	}
-
-	.navbar-default .navbar-toggle:hover,
-	.navbar-default .navbar-toggle:focus{
-		background-color: transparent;
-	}
-
-	.navbar-default .navbar-toggle .icon-bar {
-		background-color: #fff;
-	}
-
-	.navbar-default .navbar-collapse, 
-	.navbar-default .navbar-form {
-		background-color: rgba(0,0,0,0.8);
-		text-align: center;
-	}
-
-	.navbar-default .mu-menu li a {
-		display: inline-block;
-	}
-
-	.mu-team-content .row > div {
-		width: 49.5%;
-		float: left;
-	}
-
-	.mu-testimonial-slide li {
-		padding: 0 15px;
-	}
-
-	.mu-filter-item-content {
-		padding: 0;
-	}
-
-	.mu-contact-top-single {
-		margin-bottom: 25px;
-	}
-	
-		
-}
-
-
-@media (max-width: 640px){
-
-	#mu-header.mu-fixed-nav {
-		padding: 10px 0;
-	}
-	
-	.mu-featured-slider-content {
-		left: 0;
-		right: 0;
-		bottom: 0;
-		top: 30%;
-		padding: 0 10px;
-	}
-
-	.mu-featured-slider-content h2 {
-		font-size: 20px;
-		margin-bottom: 5px;
-	}
-
-	.mu-featured-slider-content p {
-		font-size: 12px;
-	}
-
-	.mu-primary-btn {
-		font-size: 12px;
-		padding: 10px 12px;
-		margin-top: 15px;
-	}
-
-	.slick-dots {
-		bottom: 15px;
-	}
-			
-
-}
-
-
-@media (max-width: 480px) {
-
-	#mu-header {
-		padding: 10px 0;
-	}
-
-	.navbar-default .navbar-brand, 
-	.navbar-default .navbar-brand:hover, 
-	.navbar-default .navbar-brand:focus {
-		font-size: 25px;
-		margin-top: 0px;
-	}
-
-	.navbar-toggle {
-		padding: 7px 8px;
-	}
-
-	.navbar-toggle .icon-bar {
-		width: 18px;
-	}
-
-	h2{
-		font-size: 25px;
-	}
-
-	.mu-heading-title {
-		margin-bottom: 10px;
-	}
-
-	.mu-about-content-single h4 {
-		margin-bottom: 18px;
-	}
-
-	.mu-simplefilter li {
-		padding: 1rem 1.3rem;
-		font-size: 14px;
-	}
-
-	.mu-team-social-info a {
-		width: 35px;
-		height: 35px;
-		font-size: 16px;
-		line-height: 35px;
-	}
-
-	.mu-contact-form button {
-		width: 100%;
-	}
-
-	.filtr-item h4 {
-		font-size: 14px;
-	}
-
-	.mu-featured-area h1 {
-		font-size: 40px;
-	}
-
-	.mu-featured-slider p, 
-	#typed,
-	#typed span {
-		font-size: 18px;
-	}
-
-	.mu-featured-content p {
-		font-size: 14px;
-	}
-
-	.mu-filter-item-content {
-		padding: 0;
-	}
-
-	.mu-featured-area {
-		padding: 20% 5%;
-	}
-
-				
-	
-}
-
-
-@media (max-width: 360px){
-
-	.mu-featured-slider-content {
-		top: 49%;
-	}
-
-	.mu-featured-slider-content p,
-	.mu-featured-slider-content .mu-primary-btn {
-		display: none;
-	}
-
-	.mu-featured-slider-content h2 {
-		font-size: 18px;
-		margin-bottom: 0;
-	}
-
-	.mu-filter-item-content {
-		padding: 0 5px;
-	}
-
-	.filtr-item h4 {
-		font-size: 12px;
-	}
-
-	.mu-team-content .row > div {
-		width: 100%;
-	}
-
-	.mu-simplefilter li {
-		padding: 1rem 1rem;
-		font-size: 12px;
-	}
-
-	.mu-portfolio-content .col-xs-6 {
-		width: 100%;
-	}
-
-	.mu-testimonial-slide li.slick-slide, 
-	.mu-contact-content {
-		padding: 0;
-	}
-
-	
-	
-}
-
-
-
-@media (max-width: 320px){
-	
-	
-	
-	
-	
-}
-/* ===== LAYOUT MÁS LIMPIO ===== */
-
-.align-items-center {
-    display: flex;
-    align-items: center;
-    gap: 40px;
-}
-
-/* columna derecha ordenada */
-.col-md-7 {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-}
-
-/* SKILL CARD MÁS PRO */
-.skill-display {
-    background: #f8f8f8;
-    padding: 35px;
-    border-radius: 16px;
-    text-align: center;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.skill-display:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 35px rgba(0,0,0,0.08);
-}
-
-/* SOCIAL */
-.custom-social {
-    margin-top: 10px;
-}
-
-/* ICONOS HORIZONTALES */
-.social-icons {
-    display: flex;
-    gap: 15px;
-    margin-top: 10px;
-}
-
-/* BOTÓN MÁS SEPARADO */
-.mu-resume-btn {
-    margin-top: 15px;
-}
-
-/* ===== EDUCATION SECTION ===== */
-
-
-.mu-education-content {
-    margin-top: 50px;
-}
-
-/* bloqes */
-.education-block {
-    margin-bottom: 40px;
-}
-
-.education-block h3 {
-    margin-bottom: 20px;
-}
-
-/* items */
-.education-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 15px;
-    margin-bottom: 15px;
-}
-
-.education-item i {
-    font-size: 22px;
-    margin-top: 5px;
-}
-
-/* TAGS (skills bonitas 🔥) */
-.skills-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
-.skills-tags span {
-    background: #eaeaea;
-    padding: 8px 14px;
-    border-radius: 20px;
-    font-size: 14px;
-    transition: 0.3s;
-}
-
-.skills-tags span:hover {
-    background: #2aa198;
-    color: #fff;
-}
-/* FIX ICONOS EDUCATION */
-
-#mu-education .mu-filter-item-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-}
-
-#mu-education .mu-filter-link,
-#mu-education .mu-filter-imglink {
-    display: inline-block;
-    margin: 5px;
-}
-
-/* contenedor de iconos */
-#mu-education .mu-filter-item-content a {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/* separar iconos en fila */
-#mu-education .mu-filter-item-content {
-    gap: 12px;
-}
-
-/* opcional: hacerlo más bonito */
-#mu-education .mu-filter-link {
-    background: #2aa198;
-}
-
-#mu-education .mu-filter-imglink {
-    background: #1b1c29;
-}
-
-.icon-group {
-    display: flex;
-    flex-direction: column;  /* 🔥 clave */
-    align-items: center;
-    gap: 10px;
-    margin-top: 10px;
-}
-
-.mu-filter-item-title,
-.mu-filter-item-content p {
-    display: none;
-}
-
-
-.mu-filter-item-content {
-    display: none;
-}
-
-.filtr-item img {
-    border-radius: 12px;
-    transition: 0.3s;
-}
-
-.filtr-item:hover img {
-    transform: scale(1.05);
-}
-
-/* ===== COMPATIBILITY FIXES ===== */
-
-html,
-body {
-	overflow-x: hidden;
-}
-
-body {
-	word-wrap: break-word;
-}
-
-/* Keep Bootstrap columns intact outside the about section */
-.col-md-7 {
-	display: block;
-	flex-direction: initial;
-	gap: 0;
-}
-
-/* Scope the custom flex layout only to the about section */
+/* About layout: este bloque solo debe afectar la seccion About. */
 #mu-about .align-items-center {
 	display: flex;
 	align-items: center;
@@ -1678,11 +1097,16 @@ body {
 	display: flex;
 	flex-direction: column;
 	gap: 30px;
+	float: none;
 }
 
 #mu-about .skills-slider,
 #mu-about .custom-social {
 	width: 100%;
+}
+
+#mu-about .custom-social {
+	margin-top: 10px;
 }
 
 #mu-about .social-icons {
@@ -1696,187 +1120,209 @@ body {
 	float: none;
 }
 
-/* Service section spacing */
-#mu-service {
-	padding: 100px 0;
+/* Tarjeta animada para las skills rotativas del index principal. */
+.skill-display {
+	background: #f8f8f8;
+	padding: 35px;
+	border-radius: 16px;
+	min-height: 160px;
+	text-align: center;
+	cursor: pointer;
+	transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.25s ease;
 }
 
-#mu-service .mu-service-content {
-	margin-top: 0;
+.skill-display i {
+	display: block;
+	font-size: 30px;
+	margin-bottom: 12px;
 }
 
-#mu-service .row {
-	margin-left: -15px;
-	margin-right: -15px;
+.skill-display h4 {
+	margin-bottom: 10px;
 }
 
-/* Portfolio / education cards */
-.filtr-container {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	align-items: stretch;
-	gap: 30px;
-	max-width: 1100px;
+.skill-display p {
+	margin-bottom: 0;
+	color: #555;
+}
+
+.skill-display:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+.skill-display.fade-out {
+	opacity: 0;
+	transform: translateY(10px);
+}
+
+.skill-display.fade-in {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+/* En index.html la seccion service no usa el wrapper original .mu-service-area.
+   Este selector evita duplicar espacio en index-en.html. */
+#mu-service > .mu-service-content {
+	padding: 100px 15px;
+}
+
+#mu-service > .mu-service-content .row {
+	max-width: 1170px;
 	margin: 0 auto;
 }
 
-.filtr-item {
+/* Portfolio: soporta las dos variantes de HTML del proyecto.
+   En una pagina el overlay esta dentro del thumbnail, y en la otra es hermano. */
+#mu-portfolio .mu-portfolio-content {
+	max-width: 1170px;
+	margin: 0 auto;
+}
+
+#mu-portfolio .filtr-item {
 	position: relative;
-	width: 100%;
-	max-width: 320px;
-	padding: 15px;
-	box-sizing: border-box;
+	margin-bottom: 30px;
 }
 
-.mu-item-thumbonail {
-	float: none;
-	display: block;
-	width: 100%;
-	border-radius: 12px;
-	overflow: hidden;
+#mu-portfolio .mu-item-thumbonail {
+	height: 260px;
+	background: #f5f5f5;
+	border-radius: 14px;
+	display: flex;
+	align-items: stretch;
+	justify-content: stretch;
+	transition: transform 0.3s ease;
 }
 
-.mu-item-thumbonail img {
-	display: block;
+#mu-portfolio .mu-item-thumbonail img {
+	flex: 1 1 auto;
 	width: 100%;
-	height: auto;
+	height: 100%;
+	object-fit: cover;
+	border-radius: 14px;
+	transition: transform 0.35s ease;
 }
 
-/* Restore portfolio overlay content */
+#mu-portfolio .filtr-item:hover .mu-item-thumbonail {
+	transform: translateY(-5px);
+}
+
+#mu-portfolio .filtr-item:hover .mu-item-thumbonail img {
+	transform: scale(1.04);
+}
+
 #mu-portfolio .mu-filter-item-content {
 	position: absolute;
-	left: 30px;
-	right: 30px;
-	bottom: 30px;
-	top: 30px;
+	inset: 15px;
+	z-index: 2;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 	gap: 12px;
 	padding: 20px;
+	border-radius: 12px;
 	background: rgba(27, 28, 41, 0.82);
 	color: #fff;
 	text-align: center;
 	opacity: 0;
-	transition: all 0.3s ease;
+	visibility: hidden;
+	transform: translateY(8px);
+	transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
 }
 
 #mu-portfolio .filtr-item:hover .mu-filter-item-content {
 	opacity: 1;
+	visibility: visible;
+	transform: translateY(0);
 }
 
 #mu-portfolio .mu-filter-item-title,
+#mu-portfolio .mu-filter-item-content h4,
 #mu-portfolio .mu-filter-item-content p {
 	display: block;
+	margin: 0;
 	color: #fff;
-	margin: 0;
 }
 
-/* Education cards keep visible text/icons without overlay */
-#mu-education .filtr-item {
-	max-width: 240px;
-}
-
-#mu-education .mu-filter-item-content {
-	position: static;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	gap: 12px;
-	padding: 16px 10px 0;
-	background: transparent;
-	color: #333;
-	opacity: 1;
-}
-
-#mu-education .mu-filter-item-title,
-#mu-education .mu-filter-item-content p {
-	display: block;
-	margin: 0;
-	color: #333;
-}
-
-#mu-education .icon-group {
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	align-items: center;
-	flex-wrap: wrap;
-	gap: 10px;
-	margin-top: 10px;
-}
-
-#mu-education .mu-filter-link,
-#mu-education .mu-filter-imglink {
+#mu-portfolio .mu-filter-link,
+#mu-portfolio .mu-filter-imglink {
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
-	margin: 0;
+	width: 44px;
+	height: 44px;
+	margin: 0 4px;
+	border: none;
+	border-radius: 50%;
+	font-size: 16px;
+	box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+	transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Resume button should not inherit social icon circle styles */
-.mu-social-media .mu-resume-btn,
-.mu-resume-btn {
-	border-radius: 4px !important;
-	width: auto !important;
-	height: auto !important;
-	line-height: normal !important;
-	padding: 10px 20px;
-	display: inline-block;
-	margin-top: 20px;
+#mu-portfolio .mu-filter-link {
+	background: #35b7b1;
+	color: #fff;
 }
 
-@media (max-width: 991px) {
-	#mu-about .align-items-center {
-		display: block;
-	}
-
-	#mu-about .col-md-7 {
-		display: block;
-	}
-
-	#mu-service,
-	.mu-about-area,
-	.mu-portfolio-area,
-	.mu-contact-area {
-		padding: 70px 0;
-	}
+#mu-portfolio .mu-filter-imglink {
+	background: #fff;
+	color: #1b1c29;
 }
 
-@media (max-width: 767px) {
-	.filtr-container {
-		gap: 20px;
-	}
-
-	.filtr-item {
-		max-width: 100%;
-	}
-
-	#mu-portfolio .mu-filter-item-content {
-		left: 15px;
-		right: 15px;
-		top: 15px;
-		bottom: 15px;
-	}
-
-	#mu-about .social-icons {
-		justify-content: center;
-	}
+#mu-portfolio .mu-filter-link:hover,
+#mu-portfolio .mu-filter-link:focus,
+#mu-portfolio .mu-filter-imglink:hover,
+#mu-portfolio .mu-filter-imglink:focus {
+	transform: translateY(-2px);
 }
 
-/* ===== EDUCATION GALLERY OVERRIDES ===== */
-
-.navbar-default .navbar-brand,
-.navbar-default .navbar-brand:hover,
-.navbar-default .navbar-brand:focus {
-	width: auto;
-	max-width: none;
-	line-height: 1;
+/* Education card helpers kept in CSS for future expansion. */
+.mu-education-content {
+	margin-top: 50px;
 }
 
+.education-block {
+	margin-bottom: 40px;
+}
+
+.education-block h3 {
+	margin-bottom: 20px;
+}
+
+.education-item {
+	display: flex;
+	align-items: flex-start;
+	gap: 15px;
+	margin-bottom: 15px;
+}
+
+.education-item i {
+	font-size: 22px;
+	margin-top: 5px;
+}
+
+.skills-tags {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+}
+
+.skills-tags span {
+	background: #eaeaea;
+	padding: 8px 14px;
+	border-radius: 20px;
+	font-size: 14px;
+	transition: 0.3s;
+}
+
+.skills-tags span:hover {
+	background: #2aa198;
+	color: #fff;
+}
+
+/* Education gallery: aca si usamos grid porque esta seccion no depende
+   de Filterizr y necesita un layout mas estable. */
 #mu-education .mu-portfolio-content {
 	max-width: 100%;
 }
@@ -1891,9 +1337,11 @@ body {
 }
 
 #mu-education .education-card {
+	float: none;
 	width: 100%;
 	max-width: none;
 	padding: 0;
+	margin-bottom: 0;
 }
 
 #mu-education .education-thumb {
@@ -1935,7 +1383,7 @@ body {
 	background: linear-gradient(180deg, rgba(17, 21, 34, 0.12) 0%, rgba(17, 21, 34, 0.86) 100%);
 	opacity: 0;
 	visibility: hidden;
-	transition: all 0.3s ease;
+	transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
 #mu-education .education-card:hover .education-overlay {
@@ -1973,6 +1421,7 @@ body {
 #mu-education .education-overlay .icon-group {
 	display: flex;
 	flex-direction: row;
+	flex-wrap: wrap;
 	align-items: center;
 	justify-content: center;
 	gap: 14px;
@@ -1991,14 +1440,7 @@ body {
 	border-radius: 50%;
 	font-size: 17px;
 	box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-}
-
-#mu-education .education-overlay .education-gallery-hidden {
-	display: none;
-}
-
-#mu-education .education-overlay .education-gallery-hidden {
-	display: none;
+	transition: transform 0.3s ease;
 }
 
 #mu-education .education-overlay .mu-filter-link {
@@ -2007,12 +1449,14 @@ body {
 }
 
 #mu-education .education-overlay .mu-filter-imglink {
-	background: #ffffff;
+	background: #fff;
 	color: #1b1c29;
 }
 
 #mu-education .education-overlay .mu-filter-link:hover,
-#mu-education .education-overlay .mu-filter-imglink:hover {
+#mu-education .education-overlay .mu-filter-link:focus,
+#mu-education .education-overlay .mu-filter-imglink:hover,
+#mu-education .education-overlay .mu-filter-imglink:focus {
 	transform: translateY(-2px);
 }
 
@@ -2029,20 +1473,240 @@ body {
 	letter-spacing: 0.4px;
 }
 
+/* Enlace oculto adicional para galerias con varias imagenes. */
+.extra-img {
+	opacity: 0;
+	pointer-events: none;
+	position: absolute;
+	width: 0;
+	height: 0;
+}
+
+
+/*--------------------*/
+/* RESPONSIVE */
+/*--------------------*/
+
 @media (max-width: 1199px) {
+
+	.navbar-brand img {
+		width: 145px;
+		margin-top: -10px;
+	}
+
+	.navbar-default .mu-menu li a {
+		margin: 10px 12px 5px;
+	}
+
+	.mu-about-content-right {
+		margin-top: 0;
+	}
+
+	.mu-skill-progress-bar h3 {
+		margin-top: 0;
+	}
+
 	#mu-education .education-gallery {
 		grid-template-columns: repeat(2, minmax(0, 1fr));
 	}
 }
 
+@media (max-width: 991px) {
+
+	.navbar-default .mu-menu li a {
+		font-size: 14px;
+		margin: 10px 5px;
+	}
+
+	.mu-primary-btn {
+		font-size: 14px;
+		padding: 12px 22px;
+	}
+
+	.mu-simplefilter li {
+		margin-bottom: 10px;
+	}
+
+	.mu-about-header,
+	.mu-service-header,
+	.mu-contact-header {
+		padding: 0;
+	}
+
+	.mu-featured-area {
+		padding: 28% 5%;
+	}
+
+	.mu-about-content-left img {
+		width: 100%;
+	}
+
+	.mu-about-content-right {
+		margin-top: 50px;
+	}
+
+	.mu-testimonial-slide li.slick-slide,
+	.mu-contact-content {
+		padding: 0 50px;
+	}
+
+	#mu-about .align-items-center {
+		display: block;
+	}
+
+	#mu-about .col-md-7 {
+		display: block;
+	}
+
+	#mu-service > .mu-service-content {
+		padding: 70px 15px;
+	}
+
+	.mu-about-area,
+	.mu-portfolio-area,
+	.mu-contact-area {
+		padding: 70px 0;
+	}
+}
+
+@media (max-width: 767px) {
+
+	.navbar-default .navbar-toggle {
+		border-color: #fff;
+	}
+
+	.navbar-default .navbar-toggle:hover,
+	.navbar-default .navbar-toggle:focus {
+		background-color: transparent;
+	}
+
+	.navbar-default .navbar-toggle .icon-bar {
+		background-color: #fff;
+	}
+
+	.navbar-default .navbar-collapse,
+	.navbar-default .navbar-form {
+		background-color: rgba(0, 0, 0, 0.8);
+		text-align: center;
+	}
+
+	.navbar-default .mu-menu li a {
+		display: inline-block;
+	}
+
+	.mu-testimonial-slide li {
+		padding: 0 15px;
+	}
+
+	.mu-contact-top-single {
+		margin-bottom: 25px;
+	}
+
+	#mu-about .social-icons {
+		justify-content: center;
+	}
+
+	#mu-portfolio .mu-filter-item-content {
+		inset: 12px;
+	}
+}
+
 @media (max-width: 640px) {
+
+	#mu-header.mu-fixed-nav {
+		padding: 10px 0;
+	}
+
+	.mu-primary-btn {
+		font-size: 12px;
+		padding: 10px 12px;
+		margin-top: 15px;
+	}
+
+	.slick-dots {
+		bottom: 15px;
+	}
+
 	#mu-education .education-gallery {
 		grid-template-columns: 1fr;
 	}
 }
 
-.extra-img {
-    opacity: 0;
-    pointer-events: none;
-    position: absolute;
+@media (max-width: 480px) {
+
+	#mu-header {
+		padding: 10px 0;
+	}
+
+	.navbar-default .navbar-brand,
+	.navbar-default .navbar-brand:hover,
+	.navbar-default .navbar-brand:focus {
+		font-size: 25px;
+		margin-top: 0;
+	}
+
+	.navbar-toggle {
+		padding: 7px 8px;
+	}
+
+	.navbar-toggle .icon-bar {
+		width: 18px;
+	}
+
+	h2 {
+		font-size: 25px;
+	}
+
+	.mu-heading-title {
+		margin-bottom: 10px;
+	}
+
+	.mu-simplefilter li {
+		padding: 1rem 1.3rem;
+		font-size: 14px;
+	}
+
+	.mu-contact-form button {
+		width: 100%;
+	}
+
+	.mu-featured-area {
+		padding: 20% 5%;
+	}
+
+	.mu-featured-area h1 {
+		font-size: 40px;
+	}
+
+	.mu-featured-slider p,
+	#typed,
+	#typed span {
+		font-size: 18px;
+	}
+
+	.mu-featured-content p {
+		font-size: 14px;
+	}
+
+	#mu-portfolio .mu-item-thumbonail {
+		height: 220px;
+	}
+}
+
+@media (max-width: 360px) {
+
+	.mu-simplefilter li {
+		padding: 1rem;
+		font-size: 12px;
+	}
+
+	.mu-testimonial-slide li.slick-slide,
+	.mu-contact-content {
+		padding: 0;
+	}
+
+	#mu-portfolio .mu-filter-item-content {
+		inset: 10px;
+		padding: 16px;
+	}
 }
