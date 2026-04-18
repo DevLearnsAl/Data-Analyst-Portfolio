@@ -84,8 +84,7 @@
 							<li><a href="#mu-service">SERVICIOS</a></li>
 							<li><a href="#mu-portfolio">PORTAFOLIO</a></li>
 							<li><a href="#mu-contact">CONTACTO</a></li>
-							<!-- BOTONES IDIOMA -->
-							<li><a href="index.html" aria-current="page">ES</a></li>
+							<!-- BOTON IDIOMA -->
 							<li><a href="index-en.html">EN</a></li>
 						</ul>
 					</div><!-- /.navbar-collapse -->
@@ -176,9 +175,11 @@
 
 														<div class="skill-display" id="skillDisplay"
 															onclick="nextSkill()">
-															<i class="fa fa-code"></i>
-															<h4>Python</h4>
-															<p>Pandas, NumPy, Scikit-learn</p>
+															<div class="skill-display-content">
+																<i class="fa fa-code"></i>
+																<h4>Python</h4>
+																<p>Pandas, NumPy, Scikit-learn</p>
+															</div>
 														</div>
 													</div>
 
@@ -861,23 +862,32 @@
 
 		let current = 0;
 		let interval;
+		let slideTimeout;
 
 		/* render con animación */
 		function renderSkill() {
 			const skill = skills[current];
 			const display = document.getElementById("skillDisplay");
+			const activeContent = display.querySelector(".skill-display-content");
 
-			display.classList.add("fade-out");
+			clearTimeout(slideTimeout);
+			activeContent.classList.remove("slide-in-right", "slide-active");
+			activeContent.classList.add("slide-out-left");
 
-			setTimeout(() => {
+			slideTimeout = setTimeout(() => {
 				display.innerHTML = `
-            <i class="fa ${skill.icon}"></i>
-            <h4>${skill.title}</h4>
-            <p>${skill.desc}</p>
+            <div class="skill-display-content slide-in-right">
+                <i class="fa ${skill.icon}"></i>
+                <h4>${skill.title}</h4>
+                <p>${skill.desc}</p>
+            </div>
         `;
-				display.classList.remove("fade-out");
-				display.classList.add("fade-in");
-			}, 200);
+
+				requestAnimationFrame(() => {
+					const nextContent = display.querySelector(".skill-display-content");
+					nextContent.classList.add("slide-active");
+				});
+			}, 180);
 		}
 
 		/* siguiente */

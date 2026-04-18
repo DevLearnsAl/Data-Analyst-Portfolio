@@ -1128,20 +1128,26 @@ button:focus {
 	min-height: 160px;
 	text-align: center;
 	cursor: pointer;
-	transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.25s ease;
+	overflow: hidden;
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.skill-display i {
+.skill-display-content {
+	transition: transform 0.35s ease, opacity 0.35s ease;
+	will-change: transform, opacity;
+}
+
+.skill-display-content i {
 	display: block;
 	font-size: 30px;
 	margin-bottom: 12px;
 }
 
-.skill-display h4 {
+.skill-display-content h4 {
 	margin-bottom: 10px;
 }
 
-.skill-display p {
+.skill-display-content p {
 	margin-bottom: 0;
 	color: #555;
 }
@@ -1151,14 +1157,19 @@ button:focus {
 	box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
 }
 
-.skill-display.fade-out {
+.skill-display-content.slide-out-left {
 	opacity: 0;
-	transform: translateY(10px);
+	transform: translateX(-36px);
 }
 
-.skill-display.fade-in {
+.skill-display-content.slide-in-right {
+	opacity: 0;
+	transform: translateX(36px);
+}
+
+.skill-display-content.slide-active {
 	opacity: 1;
-	transform: translateY(0);
+	transform: translateX(0);
 }
 
 /* En index.html la seccion service no usa el wrapper original .mu-service-area.
