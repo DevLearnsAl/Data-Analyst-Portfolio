@@ -76,14 +76,18 @@
 		  if (item.length) { return item; }
 		});
 
+		function smoothScrollToTarget(href) {
+		  var offsetTop = href === "#" ? 0 : $(href).offset().top-topMenuHeight+22;
+		  jQuery('html, body').stop().animate({
+		      scrollTop: offsetTop
+		  }, 1500);
+		}
+
 		// Bind click handler to menu items
 		// so we can get a fancy scroll animation
 		menuItems.click(function(e){
-		  var href = $(this).attr("href"),
-		      offsetTop = href === "#" ? 0 : $(href).offset().top-topMenuHeight+22;
-		  jQuery('html, body').stop().animate({ 
-		      scrollTop: offsetTop
-		  }, 1500);
+		  var href = $(this).attr("href");
+		  smoothScrollToTarget(href);
 		  e.preventDefault();
 		});
 
@@ -193,13 +197,7 @@
 
 		$('.view-my-work-btn').on('click',function (e) {
 		    e.preventDefault();
-		    var target = this.hash,
-		    $target = $(target);
-		    $('html, body').stop().animate({
-		        'scrollTop': $target.offset().top
-		    }, 1000, 'swing', function () {
-		        window.location.hash = target;
-			});
+		    smoothScrollToTarget(this.hash);
 		});
 
 
