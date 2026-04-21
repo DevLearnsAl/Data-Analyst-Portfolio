@@ -81,6 +81,7 @@
 						<ul class="nav navbar-nav mu-menu navbar-right">
 							<li><a href="#">INICIO</a></li>
 							<li><a href="#mu-about">ACERCA DE</a></li>
+							<li><a href="#mu-education">EDUCACION</a></li>
 							<li><a href="#mu-service">SERVICIOS</a></li>
 							<li><a href="#mu-portfolio">PORTAFOLIO</a></li>
 							<li><a href="#mu-contact">CONTACTO</a></li>
@@ -175,11 +176,21 @@
 
 														<div class="skill-display" id="skillDisplay"
 															onclick="nextSkill()">
+															<button class="skill-nav skill-nav-prev" type="button"
+																aria-label="Habilidad anterior"
+																onclick="prevSkill(event)">
+																<i class="fa fa-angle-left"></i>
+															</button>
 															<div class="skill-display-content">
 																<i class="fa fa-code"></i>
 																<h4>Python</h4>
 																<p>Pandas, NumPy, Scikit-learn</p>
 															</div>
+															<button class="skill-nav skill-nav-next" type="button"
+																aria-label="Siguiente habilidad"
+																onclick="nextSkill(event)">
+																<i class="fa fa-angle-right"></i>
+															</button>
 														</div>
 													</div>
 
@@ -485,13 +496,10 @@
 													target="_blank">
 													<i class="fa fa-link"></i>
 												</a>
-
 												<a class="mu-filter-imglink"
 													href="pics\CallMeMaybe\Análisis de eficiencia.png">
 													<i class="fa fa-search"></i>
 												</a>
-
-												<a class="mu-filter-imglink" href="" style="display:none"></a>
 												<a class="mu-filter-imglink"
 													href="pics\CallMeMaybe\ES\Distribución de métricas por operador.png"
 													style="display:none"></a>
@@ -514,11 +522,11 @@
 													<i class="fa fa-link"></i>
 												</a>
 
-												<a class="mu-filter-imglink" href="pics\A-B Store\image.png">
+												<a class="mu-filter-imglink" href="pics\A-B Store\Op Co.png">
 													<i class="fa fa-search"></i>
 												</a>
-
-												<a class="mu-filter-imglink" href="pics\A-B Store\Op Co.png"
+												<a class="mu-filter-imglink"
+													href="pics\A-B Store\ES\Tasa de conversion diaraia por grupo.png"
 													style="display:none"></a>
 												<a class="mu-filter-imglink"
 													href="pics\A-B Store\ES\Embudo de conversión.png"
@@ -542,13 +550,10 @@
 												</a>
 
 												<a class="mu-filter-imglink"
-													href="pics\Ride service\an-icon-design-of-data-analysis-vector.jpg">
+													href="pics\Ride service\Análisis de servicio de transporte.png">
 													<i class="fa fa-search"></i>
 												</a>
 
-												<a class="mu-filter-imglink"
-													href="pics\Ride service\Análisis de servicio de transporte.png"
-													style="display:none"></a>
 												<a class="mu-filter-imglink" href="pics\Ride service\descarga.png"
 													style="display:none"></a>
 												<a class="mu-filter-imglink" href="pics\Ride service\Top 10.png"
@@ -606,13 +611,32 @@
 													<i class="fa fa-link"></i>
 												</a>
 
-												<a class="mu-filter-imglink"
-													href="pics\Test AB - Hypo\ES\ingreso_Acumulado_AB.png">
+												<a class="mu-filter-imglink" href="pics\Test AB - Hypo\ES\PRAB.png">
 													<i class="fa fa-search"></i>
 												</a>
 
 												<a class="mu-filter-imglink"
 													href="pics\Test AB - Hypo\ES\sizeavgacc.png"
+													style="display:none"></a>
+												<a class="mu-filter-imglink"
+													href="pics\Test AB - Hypo\ES\Diferencia relativa de conversión acumulada (B vs A).png"
+													style="display:none"></a>
+												<a class="mu-filter-imglink"
+													href="pics\Test AB - Hypo\ES\Diferencia relativa de ingresos entre grupo A y B.png"
+													style="display:none"></a>
+												<a class="mu-filter-imglink"
+													href="pics\Test AB - Hypo\ES\Gráfico de dispersión del número de pedidos por usuario.png"
+													style="display:none"></a>
+												<a class="mu-filter-imglink"
+													href="pics\Test AB - Hypo\ES\ingreso_Acumulado_AB.png"
+													style="display:none"></a>
+												<a class="mu-filter-imglink" href="pics/Test AB - Hypo/ES/rev_group.png"
+													style="display:none"></a>
+												<a class="mu-filter-imglink"
+													href="pics\Test AB - Hypo\ES\Tamano promedio de compra acumulado por dia.png"
+													style="display:none"></a>
+												<a class="mu-filter-imglink"
+													href="pics\Test AB - Hypo\ES\tasa de conversión diaria por grupo.png"
 													style="display:none"></a>
 											</div>
 										</div>
@@ -621,9 +645,7 @@
 									<!-- PROYECTO 6 -->
 									<div class="col-xs-12 col-sm-6 col-md-4 filtr-item">
 										<div class="mu-item-thumbonail">
-											<img class="img-responsive"
-												src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVCRNsRKeogIUlYfttCxuzEZ16lC29MLuIMA&s"
-												alt="">
+											<img class="img-responsive" src="pics\Instacart pics\food.png" alt="">
 											<div class="mu-filter-item-content">
 												<h4>Instacart</h4>
 
@@ -632,8 +654,24 @@
 													<i class="fa fa-link"></i>
 												</a>
 
-												<a class="mu-filter-imglink" href="pics\Instacart pics\descarga.png">
+												<a class="mu-filter-imglink"
+													href="pics\Instacart pics\Análisis instacart.png">
 													<i class="fa fa-search"></i>
+													<a class="mu-filter-imglink"
+														href="pics\Instacart pics\Número de usuarios que hacen pedidos por hora del día.png"
+														style="display:none"></a>
+													<a class="mu-filter-imglink"
+														href="pics\Instacart pics\Distribución de días entre pedidos.png"
+														style="display:none"></a>
+													<a class="mu-filter-imglink"
+														href="pics\Instacart pics\Comparación de pedidos por hora.png"
+														style="display:none"></a>
+													<a class="mu-filter-imglink"
+														href="pics\Instacart pics\Distribución del número de pedidos por cliente.png"
+														style="display:none"></a>
+													<a class="mu-filter-imglink"
+														href="pics\Instacart pics\Distribución del número de artículos por pedido.png"
+														style="display:none"></a>
 												</a>
 											</div>
 										</div>
@@ -654,9 +692,6 @@
 												<a class="mu-filter-imglink" href="pics/Book Analysis/ES/image.png">
 													<i class="fa fa-search"></i>
 												</a>
-
-												<a class="mu-filter-imglink" href="pics/Book Analysis/ES/SQL.png"
-													style="display:none"></a>
 											</div>
 										</div>
 									</div>
@@ -678,30 +713,20 @@
 													href="pics/Food/Análisis A/A/B - productos alimenticios.png">
 													<i class="fa fa-search"></i>
 												</a>
+												<a class="mu-filter-imglink"
+													href="pics\Food\ES\Embudo de conversión de usuarios.png"
+													style="display:none"></a>
+												<a class="mu-filter-imglink" href="pics\Food\ES\eventosxdía.png"
+													style="display:none"></a>
+												<a class="mu-filter-imglink"
+													href="pics\Food\ES\Número de eventos por día.png"
+													style="display:none"></a>
 											</div>
 										</div>
 									</div>
+
 
 									<!-- PROYECTO 9 -->
-									<div class="col-xs-12 col-sm-6 col-md-4 filtr-item">
-										<div class="mu-item-thumbonail">
-											<img class="img-responsive" src="pics/hypoteststore/HT.png"
-												alt="Hypothesis Store">
-											<div class="mu-filter-item-content">
-												<h4>Hypothesis Store</h4>
-												<a class="mu-filter-link"
-													href="https://github.com/DevLearnsAl/Online-Store---Hypotheses"
-													target="_blank">
-													<i class="fa fa-link"></i>
-												</a>
-												<a class="mu-filter-imglink" href="pics/hypoteststore/HT.png">
-													<i class="fa fa-search"></i>
-												</a>
-											</div>
-										</div>
-									</div>
-
-									<!-- PROYECTO 10 -->
 									<div class="col-xs-12 col-sm-6 col-md-4 filtr-item">
 										<div class="mu-item-thumbonail">
 											<img class="img-responsive" src="pics/Modelo predictivo/modelpre.png"
@@ -719,37 +744,72 @@
 													<i class="fa fa-search"></i>
 												</a>
 
-												<a class="mu-filter-imglink"
-													href="pics/Modelo predictivo/modelo predictivo.png"
-													style="display:none"></a>
 												<a class="mu-filter-imglink" href="pics/Modelo predictivo/churn age.png"
 													style="display:none"></a>
 												<a class="mu-filter-imglink"
-													href="pics/Modelo predictivo/churn gender.png"
+													href="pics\Modelo predictivo\churn gender.png"
 													style="display:none"></a>
 												<a class="mu-filter-imglink"
-													href="pics/Modelo predictivo/Dendograma.png"
+													href="pics\Modelo predictivo\correlation matrix.png"
+													style="display:none"></a>
+												<a class="mu-filter-imglink"
+													href="pics\Modelo predictivo\EN\Dendogram.png"
+													style="display:none"></a>
+												<a class="mu-filter-imglink"
+													href="pics/Modelo predictivo/EN/avg_class_frequency_current_month.png"
+													style="display:none"></a>
+												<a class="mu-filter-imglink"
+													href="pics/Modelo predictivo/EN/avg_class_frequency_total.png"
+													style="display:none"></a>
+												<a class="mu-filter-imglink"
+													href="pics\Modelo predictivo\EN\contract_period.png"
+													style="display:none"></a>
+												<a class="mu-filter-imglink" href="pics\Modelo predictivo\EN\gender.png"
+													style="display:none"></a>
+												<a class="mu-filter-imglink"
+													href="pics\Modelo predictivo\EN\group_visits.png"
+													style="display:none"></a>
+												<a class="mu-filter-imglink"
+													href="pics\Modelo predictivo\EN\lifetime.png"
+													style="display:none"></a>
+												<a class="mu-filter-imglink"
+													href="pics\Modelo predictivo\EN\month_to_end_contract.png"
+													style="display:none"></a>
+												<a class="mu-filter-imglink"
+													href="pics\Modelo predictivo\EN\near location.png"
+													style="display:none"></a>
+												<a class="mu-filter-imglink"
+													href="pics\Modelo predictivo\EN\partner.png"
+													style="display:none"></a>
+												<a class="mu-filter-imglink" href="pics\Modelo predictivo\EN\phone.png"
+													style="display:none"></a>
+												<a class="mu-filter-imglink"
+													href="pics\Modelo predictivo\EN\promo_friends.png"
 													style="display:none"></a>
 											</div>
 										</div>
 									</div>
 
-									<!-- PROYECTO 11 -->
+									<!-- PROYECTO 10 -->
 									<div class="col-xs-12 col-sm-6 col-md-4 filtr-item">
 										<div class="mu-item-thumbonail">
 											<img class="img-responsive" src="pics/Tableau/ic-tabl.png" alt="Tableau">
 											<div class="mu-filter-item-content">
 												<h4>Tableau</h4>
 												<a class="mu-filter-link"
-													href="https://public.tableau.com/app/profile/alberto.alaniz/viz/YouTubevideos_17750555975920/TrendHistory"
-													target="_blank">
+													href="https://public.tableau.com/app/profile/alberto.alaniz/viz/VideosdeYouTube/Dashboard1" "
+													target=" _blank">
 													<i class="fa fa-link"></i>
-												</a>
+													<a class="mu-filter-link"
+														href="https://github.com/DevLearnsAl/Youtube-Trends---Tableau"
+														target="_blank">
+														<i class="fa fa-link"></i>
+													</a>
 
-												<a class="mu-filter-imglink"
-													href="pics/Tableau/Análisis de Tendencias en YouTube.png">
-													<i class="fa fa-search"></i>
-												</a>
+													<a class="mu-filter-imglink"
+														href="pics/Tableau/Análisis de Tendencias en YouTube.png">
+														<i class="fa fa-search"></i>
+													</a>
 											</div>
 										</div>
 									</div>
@@ -865,22 +925,31 @@
 		let slideTimeout;
 
 		/* render con animación */
-		function renderSkill() {
+		function renderSkill(direction = "next") {
 			const skill = skills[current];
 			const display = document.getElementById("skillDisplay");
 			const activeContent = display.querySelector(".skill-display-content");
+			const exitClass = direction === "prev" ? "slide-out-right" : "slide-out-left";
+			const enterClass = direction === "prev" ? "slide-in-left" : "slide-in-right";
 
 			clearTimeout(slideTimeout);
-			activeContent.classList.remove("slide-in-right", "slide-active");
-			activeContent.classList.add("slide-out-left");
+			activeContent.classList.remove("slide-in-left", "slide-in-right", "slide-out-left", "slide-out-right",
+				"slide-active");
+			activeContent.classList.add(exitClass);
 
 			slideTimeout = setTimeout(() => {
 				display.innerHTML = `
-            <div class="skill-display-content slide-in-right">
+            <button class="skill-nav skill-nav-prev" type="button" aria-label="Habilidad anterior" onclick="prevSkill(event)">
+                <i class="fa fa-angle-left"></i>
+            </button>
+            <div class="skill-display-content ${enterClass}">
                 <i class="fa ${skill.icon}"></i>
                 <h4>${skill.title}</h4>
                 <p>${skill.desc}</p>
             </div>
+            <button class="skill-nav skill-nav-next" type="button" aria-label="Siguiente habilidad" onclick="nextSkill(event)">
+                <i class="fa fa-angle-right"></i>
+            </button>
         `;
 
 				requestAnimationFrame(() => {
@@ -890,10 +959,25 @@
 			}, 180);
 		}
 
+		/* anterior */
+		function prevSkill(event) {
+			if (event) {
+				event.preventDefault();
+				event.stopPropagation();
+			}
+			current = (current - 1 + skills.length) % skills.length;
+			renderSkill("prev");
+			resetAuto();
+		}
+
 		/* siguiente */
-		function nextSkill() {
+		function nextSkill(event) {
+			if (event) {
+				event.preventDefault();
+				event.stopPropagation();
+			}
 			current = (current + 1) % skills.length;
-			renderSkill();
+			renderSkill("next");
 			resetAuto();
 		}
 
