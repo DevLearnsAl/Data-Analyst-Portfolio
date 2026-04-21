@@ -83,6 +83,13 @@
 		  }, 1500);
 		}
 
+		function smoothScrollToTarget(href) {
+		  var offsetTop = href === "#" ? 0 : $(href).offset().top-topMenuHeight+22;
+		  jQuery('html, body').stop().animate({
+		      scrollTop: offsetTop
+		  }, 1500);
+		}
+
 		// Bind click handler to menu items
 		// so we can get a fancy scroll animation
 		menuItems.click(function(e){
