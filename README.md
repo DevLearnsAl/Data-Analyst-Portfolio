@@ -4,7 +4,7 @@ Personal portfolio website showcasing data analysis projects, certifications, an
 
 ## Live Site
 
-Open `index.html` (Spanish) or `index-en.html` (English) in a browser, or deploy to GitHub Pages.
+Open [this link]([url](https://devlearnsal.github.io/Data-Analyst-Portfolio/index-en.html)) in a browser, or deploy to GitHub Pages.
 
 ## Projects
 
